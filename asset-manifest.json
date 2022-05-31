@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CursoReactCoder/static/css/main.0c652886.css",
+    "main.js": "/CursoReactCoder/static/js/main.3b334d6b.js",
+    "index.html": "/CursoReactCoder/index.html",
+    "main.0c652886.css.map": "/CursoReactCoder/static/css/main.0c652886.css.map",
+    "main.3b334d6b.js.map": "/CursoReactCoder/static/js/main.3b334d6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c652886.css",
+    "static/js/main.3b334d6b.js"
+  ]
+}

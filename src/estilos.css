@@ -28,9 +28,22 @@ nav{
     font-weight: 400;
 }
 
+.navbar-nav{
+    width: 40%;
+}
+
+nav form{
+    width: 40%;
+    margin: 0px 50px;
+}
 
 main{
     min-height: 100vh;
     background-color: rgb(12, 12, 32);
+}
+
+main h1{
+    text-align: center;
+    color: antiquewhite;
 }
 

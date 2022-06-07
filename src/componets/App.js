@@ -1,5 +1,4 @@
-import Header from "./NavBar";
-import Main from "./Main";
+import ItemListContainer from "./ItemListContainer";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
@@ -7,7 +6,7 @@ const App = () =>{
     return(
         <>
             <NavBar/> 
-            <Main/>
+            <ItemListContainer greeting="Bienvenido a React Computacion!"/>
             <Footer/>
         </>
     ) 

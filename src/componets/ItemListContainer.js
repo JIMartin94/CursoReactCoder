@@ -1,14 +1,28 @@
-import ItemCount from "./ItemCount";
+import React,{useState,useEffect} from 'react'
+import ItemList from "./ItemList";
+import { obtenerProductos } from '../productos';
 
 const ItemListContainer = ({greeting}) =>{
+    const [productos,setProductos] = useState([]);
 
-    const onAdd = () => {}
+    useEffect(()=>{
+
+        obtenerProductos()
+        .then(products =>{
+            setProductos(products)   
+        }) 
+    },[])   
+
 
     return(
         <main>
            <h1>{greeting}</h1>
-           <ItemCount stock={10} initial={1} onAdd={()=>{}}/>
+           <div className='contenedor container-fluid'>
+                <ItemList items={productos}/>
+           </div>
+           
         </main>
     );
 }
+
 export default ItemListContainer

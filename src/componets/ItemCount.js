@@ -1,10 +1,8 @@
-import React from 'react'
-import notebook from '../assets/img/notebook_asus.jpg'
-import {useState} from "react"
+import React, {useState} from "react"
 import Swal from 'sweetalert2'
 
 
-const ItemCount = ({stock , initial, onAdd }) => {
+const ItemCount = ({stock , initial,precio, onAdd }) => {
 
     const [count, setCount] = useState(initial);
 
@@ -47,18 +45,15 @@ const ItemCount = ({stock , initial, onAdd }) => {
 
     
     return (
-        <div className="card" style={{ width: '18rem'}}>
-            <img className="card-img-top" src={notebook} alt="Card image cap"/>
-            <div className="card-body">
-                <h5 className="card-title">Notebook Asus</h5>
-            </div>
+        <>
             <div className="card-body d-flex">
                 <button onClick={sacar} className="card-link" style={{ width: '2rem', height: '2rem'}}>-</button>
                 <p style={{ margin:"10px"}}>{count}</p>
                 <button onClick={agregar} className="card-link" style={{ width: '2rem', height: '2rem'}}>+</button>
+                <h5 className="precio">$ {precio}</h5>
             </div> 
-            <button onClick={confirmar} type="button" class="btn btn-primary">Agregar al carrito</button>
-        </div>
+            <button onClick={confirmar} type="button" className="btn btn-primary">Agregar al carrito</button>
+        </>
     )
 }
 

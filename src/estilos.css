@@ -3,9 +3,7 @@
     margin: 0px;
 }
 
-body{
-    background-color: black;    
-}
+
 
 nav{
     height: 100px;
@@ -45,5 +43,29 @@ main{
 main h1{
     text-align: center;
     color: antiquewhite;
+}
+
+.card{
+    width: 18rem;
+    height: 430px;
+    margin: 10px;
+
+}
+
+.card-body{
+    height: 50px;
+    width: 18rem;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.precio{
+    padding-left: 80px;
 }
 

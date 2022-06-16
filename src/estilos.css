@@ -3,7 +3,9 @@
     margin: 0px;
 }
 
-
+body{
+    background-color: rgb(12, 12, 32);
+}
 
 nav{
     height: 100px;
@@ -37,7 +39,6 @@ nav form{
 
 main{
     min-height: 80vh;
-    background-color: rgb(12, 12, 32);
 }
 
 main h1{
@@ -55,6 +56,7 @@ main h1{
 .card-body{
     height: 50px;
     width: 18rem;
+
 }
 
 .contenedor{
@@ -67,5 +69,20 @@ main h1{
 
 .precio{
     padding-left: 80px;
+}
+
+.detalle{
+    padding-left: 5px;
+}
+
+#detalleProd{
+    width: 80%;
+    height: 16rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 20px;
+    padding-left: 5px;
 }
 

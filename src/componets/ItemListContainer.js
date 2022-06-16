@@ -11,6 +11,9 @@ const ItemListContainer = ({greeting}) =>{
         .then(products =>{
             setProductos(products)   
         }) 
+        .catch((error) =>{
+            console.log(error)
+        });
     },[])   
 
 

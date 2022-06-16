@@ -103,3 +103,12 @@ export const obtenerProductos = () => {
         },2000)
     });
 }
+
+export const obtenerProducto = (num) => {
+    return new Promise((res)=>{
+        setTimeout(()=>{
+            
+            res(productos[num-1]) 
+        },500)
+    });
+}

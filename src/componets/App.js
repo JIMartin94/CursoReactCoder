@@ -13,7 +13,7 @@ const App = () =>{
             <NavBar/> 
             <main>
                 <Routes>
-                    <Route path="/" element={<ItemListContainer greeting="Bienvenido a React Computacion!"/> } />
+                    <Route path="/CursoReactCoder" element={<ItemListContainer greeting="Bienvenido a React Computacion!"/> } />
                     <Route path="/detalle/:id" element={<ItemDetailContainer/>} />
                     <Route path="/categoria/:categoryId" element={<ItemListContainer/>} />
                 </Routes>

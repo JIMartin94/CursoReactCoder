@@ -2,41 +2,25 @@ import ItemListContainer from "./ItemListContainer";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import ItemDetailContainer from "./ItemDetailContainer";
-import { useEffect ,useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () =>{
 
-    const [id,setId] = useState();
-
-    useEffect(()=>{
-
-        //OBTENGO EL ID DE CADA BOTON
-        const clickearId = e => {
-            if(e.target.classList.contains("detalle")){
-                return e.target.id;
-            }
-        }
-
-
-        let contenedor = document.querySelector(".contenedor");
-
-        if(contenedor != null){
-
-            contenedor.addEventListener("click", e => {
-                let id2 = clickearId(e);
-                if(id2 != null){
-                    setId(id2);
-                }
-            });
-        }
-    },[])
-
     return(
-        <>
+        <>      
+        
+        <BrowserRouter>
             <NavBar/> 
-            <ItemListContainer greeting="Bienvenido a React Computacion!"/>
-            <ItemDetailContainer id={id} />
+            <main>
+                <Routes>
+                    <Route path="/" element={<ItemListContainer greeting="Bienvenido a React Computacion!"/> } />
+                    <Route path="/detalle/:id" element={<ItemDetailContainer/>} />
+                    <Route path="/categoria/:categoryId" element={<ItemListContainer/>} />
+                </Routes>
+            </main>
             <Footer/>
+        </BrowserRouter>   
+        
         </> 
     ) 
 }

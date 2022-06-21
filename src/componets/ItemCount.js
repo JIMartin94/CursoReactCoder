@@ -50,7 +50,7 @@ const ItemCount = ({stock , initial,precio, onAdd }) => {
                 <button onClick={sacar} className="card-link" style={{ width: '2rem', height: '2rem'}}>-</button>
                 <p style={{ margin:"10px"}}>{count}</p>
                 <button onClick={agregar} className="card-link" style={{ width: '2rem', height: '2rem'}}>+</button>
-                <h5 className="precio">$ {precio}</h5>
+                <h5 className="precio">$ {precio*count}</h5>
             </div> 
             <button onClick={confirmar} type="button" className="btn btn-primary">Agregar al carrito</button>
         </>

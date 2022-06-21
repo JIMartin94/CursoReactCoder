@@ -1,6 +1,7 @@
 
 const productos = [{
     "id":1,
+    "categoryId":1,
     "nombre": "Notebook HP Gamer",
     "imagen": "https://images.fravega.com/f300/3f26599877d9efbba2d76f2a2e392e5f.jpg.webp",
     "precio": 164999,
@@ -9,6 +10,7 @@ const productos = [{
 },
 {
     "id":2,
+    "categoryId":3,
     "nombre": "Celular Samsung Galaxy",
     "imagen": "https://images.fravega.com/f300/e788ab6fe5608762f6b01e10945c871e.jpg.webp",
     "precio": 53999,
@@ -17,6 +19,7 @@ const productos = [{
 },
 {
     "id":3,
+    "categoryId":1,
     "nombre": "Monitor Gamer Samsung",
     "imagen": "https://images.fravega.com/f300/393cba5a66fe2d29273ed1e7244f3e60.jpg.webp",
     "precio": 44999,
@@ -25,6 +28,7 @@ const productos = [{
 },
 {
     "id":4,
+    "categoryId":2,
     "nombre": "Mouse Pad Gamer",
     "imagen": "https://images.fravega.com/f300/5aa8eb4b9af6722bf74082ab2b189a47.jpg.webp",
     "precio": 2399,
@@ -33,6 +37,7 @@ const productos = [{
 },
 {
     "id":5,
+    "categoryId":1,
     "nombre": "Placa De Video Rtx 3090",
     "imagen": "https://images.fravega.com/f300/1637f48f5b845b3f4a48656d01a420c7.jpg.webp",
     "precio": 799999,
@@ -41,6 +46,7 @@ const productos = [{
 },
 {
     "id":6,
+    "categoryId":1,
     "nombre": "Procesador Intelcore i7",
     "imagen": "https://images.fravega.com/f300/4395c94013987a5f209bdcf80eb39c09.jpg.webp",
     "precio": 103977,
@@ -49,6 +55,7 @@ const productos = [{
 },
 {
     "id":7,
+    "categoryId":1,
     "nombre": "Mother Gigabyte Z690",
     "imagen": "https://images.fravega.com/f300/c5aacc137ce54ed962c51f89de56c228.jpg.webp",
     "precio": 87445,
@@ -57,6 +64,7 @@ const productos = [{
 },
 {
     "id":8,
+    "categoryId":2,
     "nombre": "Silla Gamer Sharkoon",
     "imagen": "https://images.fravega.com/f300/4a7cd161bb8beca5b32aa435ebf1410c.jpg.webp",
     "precio": 76499,
@@ -65,6 +73,7 @@ const productos = [{
 },
 {
     "id":9,
+    "categoryId":2,
     "nombre": "Volante Gaming",
     "imagen": "https://images.fravega.com/f300/41217d20525fe97ea7ce4205f3ca6e21.jpg.webp",
     "precio": 29999,
@@ -73,6 +82,7 @@ const productos = [{
 },
 {
     "id":10,
+    "categoryId":2,
     "nombre": "Auricular Corsair Hs60",
     "imagen": "https://images.fravega.com/f300/660568e0f3502bab29bc84c367d91794.jpg.webp",
     "precio": 29700,
@@ -81,6 +91,7 @@ const productos = [{
 },
 {
     "id":11,
+    "categoryId":1,
     "nombre": "Gabinete Sharkoon",
     "imagen": "https://images.fravega.com/f300/a388240c7db8aec7311ecc0e17c2a53f.jpg.webp",
     "precio": 25199,
@@ -89,6 +100,7 @@ const productos = [{
 },
 {
     "id":12,
+    "categoryId":2,
     "nombre": "Teclado Gamer Logitec",
     "imagen": "https://images.fravega.com/f300/7137502811c65902fb25326bb574541f.jpg.webp",
     "precio": 20999,
@@ -108,7 +120,17 @@ export const obtenerProducto = (num) => {
     return new Promise((res)=>{
         setTimeout(()=>{
             
-            res(productos[num-1]) 
-        },500)
+            res(productos.find(p => p.id === num))
+        },2000)
+    });
+}
+
+export const obtenerProductoByCategory = (categoria) => {
+    return new Promise((res)=>{
+        setTimeout(()=>{
+            
+            res(productos.filter(p => p.categoryId === categoria))
+            
+        },2000)
     });
 }

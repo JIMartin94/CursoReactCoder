@@ -1,9 +1,12 @@
+import {Link} from 'react-router-dom'
+
+
 const Logo = () => {
   return (
-    <a className="navbar-brand" href="#/" id="logo">
+    <Link className="navbar-brand" to="/" id="logo">
         <img src="https://icongr.am/devicon/react-original.svg?size=128&color=currentColor"  alt="Logo Pagina" />
         <p>React computación</p>
-    </a>
+    </Link>
   )
 }
 

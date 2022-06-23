@@ -11,6 +11,8 @@ const ItemListContainer = ({greeting}) =>{
 
     useEffect(()=>{
 
+        setEstado(true) 
+
         if(categoryId){
             obtenerProductoByCategory(parseInt(categoryId))
             .then(products =>{
@@ -30,7 +32,7 @@ const ItemListContainer = ({greeting}) =>{
                 console.log(error)
             });
         }
-    },[categoryId,estado])    
+    },[categoryId])    
 
     return(
         <>

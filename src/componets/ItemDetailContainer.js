@@ -10,15 +10,14 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-
-            obtenerProducto(parseInt(id))
-            .then(product =>{
-                setProducto(product)   
-                setEstado(false)
-            }) 
-            .catch((error) =>{
-                console.log(error)
-            });
+      obtenerProducto(parseInt(id))
+      .then(product =>{
+          setProducto(product)   
+          setEstado(false)
+      }) 
+      .catch((error) =>{
+          console.log(error)
+      });
     })
 
   return (

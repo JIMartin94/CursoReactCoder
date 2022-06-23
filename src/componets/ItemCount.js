@@ -34,6 +34,7 @@ const ItemCount = ({stock , initial,precio, onAdd }) => {
 
     const confirmar = () => {
         if(stock >= count){
+            onAdd(count);
             Swal.fire({
                 title: "Producto agregado",
                 text: "Cantidad del producto: "+count,
@@ -46,13 +47,12 @@ const ItemCount = ({stock , initial,precio, onAdd }) => {
     
     return (
         <>
-            <div className="card-body d-flex">
+            <div className="card-body contador">
                 <button onClick={sacar} className="card-link" style={{ width: '2rem', height: '2rem'}}>-</button>
                 <p style={{ margin:"10px"}}>{count}</p>
-                <button onClick={agregar} className="card-link" style={{ width: '2rem', height: '2rem'}}>+</button>
-                <h5 className="precio">$ {precio*count}</h5>
+                <button onClick={agregar} className="card-link" style={{ width: '2rem', height: '2rem'}}>+</button>         
             </div> 
-            <button onClick={confirmar} type="button" className="btn btn-primary">Agregar al carrito</button>
+            <button onClick={confirmar} type="button" className="btn btn-primary">Confirmar</button>
         </>
     )
 }

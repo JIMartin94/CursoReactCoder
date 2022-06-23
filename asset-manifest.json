@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CursoReactCoder/static/css/main.0cc2f353.css",
-    "main.js": "/CursoReactCoder/static/js/main.01f5175b.js",
+    "main.css": "/CursoReactCoder/static/css/main.2ba73fcc.css",
+    "main.js": "/CursoReactCoder/static/js/main.52fd6182.js",
     "index.html": "/CursoReactCoder/index.html",
-    "main.0cc2f353.css.map": "/CursoReactCoder/static/css/main.0cc2f353.css.map",
-    "main.01f5175b.js.map": "/CursoReactCoder/static/js/main.01f5175b.js.map"
+    "main.2ba73fcc.css.map": "/CursoReactCoder/static/css/main.2ba73fcc.css.map",
+    "main.52fd6182.js.map": "/CursoReactCoder/static/js/main.52fd6182.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cc2f353.css",
-    "static/js/main.01f5175b.js"
+    "static/css/main.2ba73fcc.css",
+    "static/js/main.52fd6182.js"
   ]
 }

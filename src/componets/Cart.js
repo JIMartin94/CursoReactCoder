@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { contexto } from './CartContext'
 
 const Cart = () => {
+
+  const context = useContext(contexto)
+
   return (
-    <div>Cart</div>
+    <>
+      <h1>Carrito!</h1>
+      <button onClick={()=> context.clear()}>Limpiar carrito</button>
+    </>
+
+
   )
 }
 

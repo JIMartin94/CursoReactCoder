@@ -64,6 +64,16 @@ main h1{
   margin-bottom: 20px;
   height: 30px;
 }
+
+.carrito{
+  color: antiquewhite;
+}
+
+.btn{
+  text-decoration: none;
+}
+
+
 .contenedor{
     display: flex;
     flex-wrap: wrap;

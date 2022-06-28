@@ -43,8 +43,7 @@ const ItemCount = ({stock , initial,precio, onAdd }) => {
             });
         }
     }
-
-    
+  
     return (
         <>
             <div className="card-body contador">

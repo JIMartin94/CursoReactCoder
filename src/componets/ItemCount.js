@@ -35,12 +35,6 @@ const ItemCount = ({stock , initial,precio, onAdd }) => {
     const confirmar = () => {
         if(stock >= count){
             onAdd(count);
-            Swal.fire({
-                title: "Producto agregado",
-                text: "Cantidad del producto: "+count,
-                icon: "success",
-                timer: 2000
-            });
         }
     }
   

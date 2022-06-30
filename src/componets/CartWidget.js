@@ -12,7 +12,7 @@ const CartWidget = () => {
       <Link  to={"/carrito"}  >
         <img src="https://icongr.am/material/cart.svg?size=67&color=ede8e8" alt="carrito" />
       </Link>
-      <p className="carrito">Carrito {resultado.cantidadProductos}</p>
+      <p className="carrito">{resultado.cantidadProductos > 0 ? "Productos " + resultado.cantidadProductos  : "Carrito vacio"}</p>
     </div>
   )
 }

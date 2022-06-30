@@ -47,12 +47,20 @@ export const MiProvider = ({children}) => {
     return false
   }
 
-    const valorDelContexto = {
+  const removeItem = (id) => {
+    let prod = carrito.find(item => { return item.id === id})
+    setCantidadProducto(cantidadProductos-prod.cantidad)
+    setPrecioTotal(precioTotal-prod.precio*prod.cantidad)
+    setCarrito(carrito.filter(item => (item.id !== id))) 
+  }
+
+  const valorDelContexto = {
         carrito : carrito,
         cantidadProductos : cantidadProductos,
         precioTotal : precioTotal,
         addItem : addItem,
         clear : clear,
+        removeItem : removeItem,
     }
 
     console.log(carrito);

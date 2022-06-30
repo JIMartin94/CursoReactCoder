@@ -6,7 +6,7 @@ import Menu from "./Menu"
 const NavBar = () => {
   return (
     <>
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav id="nav" className="navbar navbar-expand-sm navbar-dark bg-dark">
             <div className="container-fluid">
                 <Logo />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">

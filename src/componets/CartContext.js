@@ -12,7 +12,7 @@ export const MiProvider = ({children}) => {
   const addItem = (item, cantidad) =>{
     const copia = [...carrito]
        
-    let estado = isInCart(item.id,carrito);
+    let estado = isInCart(item.id);
 
     if(estado){
       for(let p of carrito){
@@ -38,8 +38,8 @@ export const MiProvider = ({children}) => {
     setPrecioTotal(0)
   }
 
-  const isInCart = (id,cart) =>{
-    for(let p of cart){   
+  const isInCart = (id,) =>{
+    for(let p of carrito){   
       if(p.id === id){
         return true
       }
@@ -61,9 +61,7 @@ export const MiProvider = ({children}) => {
         addItem : addItem,
         clear : clear,
         removeItem : removeItem,
-    }
-
-    console.log(carrito);
+  }
 
   return (
     <Provider value={valorDelContexto}>

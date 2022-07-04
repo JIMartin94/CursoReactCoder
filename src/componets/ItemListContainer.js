@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
-import { obtenerProductos, obtenerProductoByCategory} from '../productos';
 import Loading from './Loading';
+import { collectionProd } from '../firebase';
+import { getDocs, query , where } from 'firebase/firestore';
 
 const ItemListContainer = ({greeting}) =>{
     const [productos,setProductos] = useState([]);
@@ -14,23 +15,31 @@ const ItemListContainer = ({greeting}) =>{
         setEstado(true) 
 
         if(categoryId){
-            obtenerProductoByCategory(parseInt(categoryId))
-            .then(products =>{
-                setProductos(products) 
-                setEstado(false)  
-            }) 
-            .catch((error) =>{
-                console.log(error)
+            const ref = query(collectionProd,where("categoryId","==",parseInt(categoryId)));
+            getDocs(ref).then( response =>{
+                const productos = response.docs.map( doc =>{
+                    return{
+                        id: doc.id,
+                        ...doc.data(),
+                    };
+                });
+            setProductos(productos);
+            setEstado(false)
             })
         }else{
-            obtenerProductos()
-            .then(products =>{
-                setProductos(products)
-                setEstado(false)   
-            }) 
-            .catch((error) =>{
-                console.log(error)
-            });
+
+            const ref = collectionProd;
+            getDocs(ref).then( response =>{
+                const productos = response.docs.map( doc =>{
+                    return{
+                        id: doc.id,
+                        ...doc.data(),
+                    };
+
+                });
+            setProductos(productos);
+            setEstado(false)
+            })
         }
     },[categoryId])    
 
@@ -39,8 +48,7 @@ const ItemListContainer = ({greeting}) =>{
            <h1>{greeting}</h1>
            <div className='contenedor container-fluid'>
                 {estado? <Loading/> : <ItemList items={productos}/>}
-           </div>
-           
+           </div>   
         </>
     );
 }

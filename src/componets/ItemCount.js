@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import Swal from 'sweetalert2'
 
 
-const ItemCount = ({stock , initial,precio, onAdd }) => {
+const ItemCount = ({stock , initial, onAdd }) => {
 
     const [count, setCount] = useState(initial);
 

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const TerminarCompra = () => {
 
     const context = useContext(contexto)
-    const {precioTotal} = context
+    const {precioTotal,clear} = context
 
   return (
     <div className="terminarCompra">
@@ -23,6 +23,7 @@ const TerminarCompra = () => {
                 </div>
             </div>
         </div>
+        <button className="btn btn-danger limpiarCompra" onClick={()=>{clear()}}>Limpiar carrito</button>
     </div>   
   )
 }

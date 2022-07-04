@@ -6,6 +6,7 @@ import { MiProvider } from "./CartContext";
 
 const App = () =>{
 
+ 
     return(        
         <BrowserRouter>
 

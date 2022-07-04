@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import {obtenerProducto} from '../productos';
 import ItemDetail from './ItemDetail';
 import Loading from './Loading';
 import {useParams} from 'react-router-dom';
+import { collectionProd } from '../firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [producto,setProducto] = useState({});
@@ -10,15 +11,19 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-      obtenerProducto(parseInt(id))
-      .then(product =>{
-          setProducto(product)   
-          setEstado(false)
-      }) 
-      .catch((error) =>{
-          console.log(error)
-      });
-    })
+      const ref = doc(collectionProd, id);
+
+      getDoc(ref).then( response =>{
+        const product = () =>{
+            return{
+                id: response.id,
+                ...response.data(),
+            };
+        };
+      setProducto(product);
+      setEstado(false)
+      })
+    },[id])
 
   return (
     <>

@@ -55,9 +55,12 @@ main h1{
     box-shadow: 1px 3px 10px black;
 }
 
-.card-body{
-    height: 50px;
+ .card-body{
     width: 18rem;
+}
+
+.producto{
+  height: 50px; 
 }
 
 .card-title{
@@ -154,8 +157,8 @@ height: 30px;
 .terminarCompra .card{
   width: 100%;
   min-height: 200px;
-  height: auto +10px;
-  margin: 0px;
+  height: auto;
+  margin: 0px 0px 10px 0px;
 }
 
 .terminarCompra .card-body{

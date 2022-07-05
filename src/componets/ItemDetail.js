@@ -19,7 +19,7 @@ const ItemDetail = ({product}) => {
           <h5 className="card-title">{product.descripcion}</h5>
       </div>
       <h5 className="precioDestalle">$ {product.precio}</h5>
-      {estado ? <ItemCount stock={product.stock} initial={1} precio={product.precio} onAdd={onAdd}/> : <BotonAgregarCart product={product} cantidad={cantidad}/>}
+      {estado ? <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/> : <BotonAgregarCart product={product} cantidad={cantidad}/>}
       
     </div>
   )

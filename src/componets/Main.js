@@ -2,6 +2,7 @@ import ItemListContainer from "./ItemListContainer";
 import Cart from "./Cart";
 import ItemDetailContainer from "./ItemDetailContainer";
 import { Routes, Route } from "react-router-dom";
+import CheckOut from "./CheckOut";
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
             <Route path="/detalle/:id" element={<ItemDetailContainer/>} />
             <Route path="/categoria/:categoryId" element={<ItemListContainer/>} />
             <Route path="/carrito" element={<Cart/>} />
+            <Route path="/formularioDeCompra" element={<CheckOut />} />
         </Routes>
     </main>
   )

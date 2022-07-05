@@ -181,6 +181,23 @@ height: 30px;
   border: none;
 }
 
+.formCompra{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  color: antiquewhite;
+}
+
+.formCompra h5{
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.formCompra .form-group{
+  margin-bottom: 10px;
+}
+
 .contador{
   display: flex;
   flex-direction: row;

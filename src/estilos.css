@@ -12,6 +12,16 @@ nav{
     box-shadow: 1px 3px 10px black;
 }
 
+.logo{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.carrrito{
+  padding-top: 10px;
+}
+
 #logo{
     display: flex;
     flex-direction: column;

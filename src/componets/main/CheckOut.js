@@ -1,7 +1,7 @@
 import { addDoc, serverTimestamp } from 'firebase/firestore'
 import { useContext } from 'react'
-import { collectionOrdenes } from '../firebase' 
-import { contexto } from './CartContext'
+import { collectionOrdenes } from '../../firebase' 
+import { contexto } from '../carrito/CartContext'
 import Swal from 'sweetalert2'
 
 const CheckOut = () => {
@@ -15,7 +15,7 @@ const CheckOut = () => {
           icon: "error",
           timer: 3000  
         }).then( () =>{
-          window.location.href = "./CursoReactCoder";
+          window.location.href = "./";
         });
     } 
 
@@ -62,7 +62,7 @@ const CheckOut = () => {
                 text: "el codigo de seguimiento es: "+ resultado.id,
                 icon: "success",
             }).then( () =>{
-                window.location.href = "./CursoReactCoder";
+                window.location.href = "./";
                 clear();
               })
         }).catch(error =>{

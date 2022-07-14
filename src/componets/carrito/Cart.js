@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { contexto } from './CartContext'
 import CartItems from './CartItems'
 import Swal from 'sweetalert2'
-import TerminarCompra from './TerminarCompra'
+import TerminarCompra from '../main/TerminarCompra'
 
 const Cart = () => {
 
@@ -16,7 +16,7 @@ const Cart = () => {
         icon: "error",
         timer: 3000  
       }).then( () =>{
-        window.location.href = "./CursoReactCoder";
+        window.location.href = "./";
       });
     } 
 

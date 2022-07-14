@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ItemCount from './ItemCount'
-import BotonAgregarCart from './BotonAgregarCart'
+import BotonAgregarCart from '../carrito/BotonAgregarCart';
 
 const ItemDetail = ({product}) => {
 

@@ -45,7 +45,7 @@ const ItemCount = ({stock , initial, onAdd }) => {
                 <p style={{ margin:"10px"}}>{count}</p>
                 <button onClick={agregar} className="card-link" style={{ width: '2rem', height: '2rem'}}>+</button>         
             </div> 
-            <button onClick={confirmar} type="button" className="btn btn-primary">Confirmar</button>
+            <button onClick={confirmar} type="button" className="btn btn-primary">Confirmar Cantidad</button>
         </>
     )
 }

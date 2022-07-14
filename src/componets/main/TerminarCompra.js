@@ -1,7 +1,7 @@
 import React from 'react'
 import DescripcionProd from './DescripcionProd'
 import { useContext } from 'react'
-import { contexto } from './CartContext'
+import { contexto } from '../carrito/CartContext'
 import { Link } from 'react-router-dom'
 
 const TerminarCompra = () => {
@@ -18,7 +18,7 @@ const TerminarCompra = () => {
                 <DescripcionProd />
                 <h5>Precio Final: ${precioTotal}</h5>
                 <div className='FinalizarCompra'>
-                    <Link to='/CursoReactCoder' className="btn btn-primary btnFinalizarCompra">Volver al menu</Link>
+                    <Link to='/' className="btn btn-primary btnFinalizarCompra">Volver al menu</Link>
                     <Link to='/formularioDeCompra' className="btn btn-success btnFinalizarCompra">Finalizar compra</Link>
                 </div>
             </div>

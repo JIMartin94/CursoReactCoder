@@ -1,8 +1,8 @@
 import Footer from "./Footer";
-import NavBar from "./NavBar";
-import Main from "./Main";
+import NavBar from "./navBar/NavBar";
+import Main from "./main/Main";
 import { BrowserRouter } from "react-router-dom";
-import { MiProvider } from "./CartContext";
+import { MiProvider } from "./carrito/CartContext";
 
 const App = () =>{
 

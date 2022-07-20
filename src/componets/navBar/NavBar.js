@@ -4,17 +4,15 @@ import Menu from "./Menu"
 
 const NavBar = () => {
   return (
-    <>
-        <div className="container-fluid">
-            <div className="row">       
-                <nav id="nav" className="navbar navbar-expand-sm navbar-dark bg-dark">             
-                    <Logo />
-                    <Menu/>              
-                    <CartWidget/>
-                </nav>
-            </div>                
-        </div>
-    </>
+    <div className="container-fluid">
+      <div className="row">
+        <nav id="nav" className="navbar navbar-expand-sm navbar-dark bg-dark">
+          <Logo />
+          <Menu />
+          <CartWidget />
+        </nav>
+      </div>
+    </div>
   )
 }
 

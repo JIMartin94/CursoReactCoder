@@ -4,20 +4,16 @@ import Main from "./main/Main";
 import { BrowserRouter } from "react-router-dom";
 import { MiProvider } from "./carrito/CartContext";
 
-const App = () =>{
-
- 
-    return(        
+const App = () => {
+    return (
         <BrowserRouter>
-
             <MiProvider>
-                <NavBar/> 
-                <Main/>    
+                <NavBar />
+                <Main />
             </MiProvider>
-            <Footer/>
-            
-        </BrowserRouter>             
-    ) 
+            <Footer />
+        </BrowserRouter>
+    )
 }
 
 export default App;

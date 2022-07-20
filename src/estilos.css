@@ -45,7 +45,7 @@ nav{
 
 nav form{
     width: 40%;
-    margin: 0px 50px;
+    margin: 0px ;
 }
 
 main{
@@ -238,11 +238,14 @@ footer h5{
 }
 
 footer .navbar-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 200px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 235px;
+  width: 100%;
 }
+
+
 
 .lds-roller {
     display: flex;

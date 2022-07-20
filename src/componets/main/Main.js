@@ -7,13 +7,13 @@ import CheckOut from "./CheckOut";
 const Main = () => {
   return (
     <main>
-        <Routes>
-            <Route path="/" element={<ItemListContainer greeting="Bienvenido a React Computacion!"/> } />
-            <Route path="/detalle/:id" element={<ItemDetailContainer/>} />
-            <Route path="/categoria/:categoryId" element={<ItemListContainer/>} />
-            <Route path="/carrito" element={<Cart/>} />
-            <Route path="/formularioDeCompra" element={<CheckOut />} />
-        </Routes>
+      <Routes>
+        <Route path="/CursoReactCoder" element={<ItemListContainer greeting="Bienvenido a React Computacion!" />} />
+        <Route path="/CursoReactCoder/detalle/:id" element={<ItemDetailContainer />} />
+        <Route path="/CursoReactCoder/categoria/:categoryId" element={<ItemListContainer />} />
+        <Route path="/CursoReactCoder/carrito" element={<Cart />} />
+        <Route path="/CursoReactCoder/formularioDeCompra" element={<CheckOut />} />
+      </Routes>
     </main>
   )
 }

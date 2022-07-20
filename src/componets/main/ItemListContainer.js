@@ -1,54 +1,54 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
 import Loading from '../Loading';
 import { collectionProd } from '../../firebase';
-import { getDocs, query , where } from 'firebase/firestore';
+import { getDocs, query, where } from 'firebase/firestore';
 
-const ItemListContainer = ({greeting}) =>{
-    const [productos,setProductos] = useState([]);
-    const [estado,setEstado] = useState(true);
-    const {categoryId} = useParams();
+const ItemListContainer = ({ greeting }) => {
+    const [productos, setProductos] = useState([]);
+    const [estado, setEstado] = useState(true);
+    const { categoryId } = useParams();
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        setEstado(true) 
+        setEstado(true)
 
-        if(categoryId){
-            const ref = query(collectionProd,where("categoryId","==",parseInt(categoryId)));
-            getDocs(ref).then( response =>{
-                const productos = response.docs.map( doc =>{
-                    return{
+        if (categoryId) {
+            const ref = query(collectionProd, where("categoryId", "==", parseInt(categoryId)));
+            getDocs(ref).then(response => {
+                const productos = response.docs.map(doc => {
+                    return {
                         id: doc.id,
                         ...doc.data(),
                     };
                 });
-            setProductos(productos);
-            setEstado(false)
+                setProductos(productos);
+                setEstado(false)
             })
-        }else{
+        } else {
 
             const ref = collectionProd;
-            getDocs(ref).then( response =>{
-                const productos = response.docs.map( doc =>{
-                    return{
+            getDocs(ref).then(response => {
+                const productos = response.docs.map(doc => {
+                    return {
                         id: doc.id,
                         ...doc.data(),
                     };
 
                 });
-            setProductos(productos);
-            setEstado(false)
+                setProductos(productos);
+                setEstado(false)
             })
         }
-    },[categoryId])    
+    }, [categoryId])
 
-    return(
+    return (
         <>
-           <h1>{greeting}</h1>
-           <div className='contenedor container-fluid'>
-                {estado? <Loading/> : <ItemList items={productos}/>}
-           </div>   
+            <h1>{greeting}</h1>
+            <div className='contenedor container-fluid'>
+                {estado ? <Loading /> : <ItemList items={productos} />}
+            </div>
         </>
     );
 }
